@@ -57,7 +57,7 @@ export default function ServicesSection() {
               transition={{ type: "spring", stiffness: 150, duration: 0.5 }}
               className="bg-white rounded-xl shadow-md border border-blue-100 p-4"
             >
-              <div className="w-full h-40 relative rounded-md overflow-hidden">
+              <div className="w-full h-50 relative rounded-md overflow-hidden">
                 <Image
                   src={`/services/${service.img}`}
                   alt={service.nameBn}

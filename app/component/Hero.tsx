@@ -51,7 +51,7 @@ export default function HeroSection() {
             src="/nicu.webp"
             alt="অ্যাপোলো স্পেশালাইজড হাসপাতাল"
             fill
-            className="rounded-xs object-fill md:object-fill"
+            className="rounded-xs object-cover md:object-contain"
           />
 
           {/* NICU text box */}
