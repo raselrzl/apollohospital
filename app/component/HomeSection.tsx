@@ -9,7 +9,7 @@ export default function HomeSection() {
     >
       {/* Left side - Text */}
       <div className="md:w-1/2 flex flex-col justify-center space-y-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+        <h1 className="text-2xl md:text-5xl font-extrabold text-gray-900 leading-tight">
           অ্যাপোলো <br />
           স্পেশালাইজড <br />
           হাসপাতাল মৌলভীবাজার
@@ -17,7 +17,7 @@ export default function HomeSection() {
         <p className="text-lg md:text-2xl text-gray-800">
           আপনার সুস্থতা, আমাদের অঙ্গীকার! অ্যাপোলো হাসপাতাল – মৌলভীবাজারের
           বিশ্বস্ত স্বাস্থ্যসেবা। দক্ষ চিকিৎসক এবং যত্নশীল সেবা, সবসময় আপনার
-          সুস্থতা ও সুস্বাস্থ্যের জন্য নিবেদিত
+          সুস্থতা ও সুস্বাস্থ্যের জন্য নিবেদিত।
         </p>
         <div className="flex justify-start space-x-4 mt-4 items-end">
           <a
