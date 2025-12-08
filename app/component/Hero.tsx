@@ -4,6 +4,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
+  const stats = [
+    { title: "৪৫+", desc: "যোগ্যতাসম্পন্ন ডাক্তার" },
+    { title: "১৪৫k+", desc: "পজিটিভ রিভিউ" },
+    { title: "১০০%", desc: "স্বাস্থ্য সেবায় অগ্রাধিকার" },
+    { title: "✓", desc: "আপনার পছন্দের ডাক্তার" },
+  ];
+
   return (
     <>
       {/* Hero Section */}
@@ -15,6 +22,7 @@ export default function HeroSection() {
         <motion.div
           className="md:w-1/2 flex flex-col justify-center space-y-6"
           initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }} // ensures initial visibility
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
@@ -43,6 +51,7 @@ export default function HeroSection() {
         <motion.div
           className="md:w-1/2 w-full mt-8 md:mt-0 relative h-64 md:h-80 rounded-xl flex justify-center items-center"
           initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
@@ -63,6 +72,7 @@ export default function HeroSection() {
         <motion.p
           className="mt-4 text-center text-gray-800 text-lg block md:hidden"
           initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }} // always visible initially
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
@@ -76,6 +86,7 @@ export default function HeroSection() {
         <motion.h2
           className="text-2xl md:text-5xl font-extrabold text-blue-900 leading-tight text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
@@ -86,6 +97,7 @@ export default function HeroSection() {
         <motion.p
           className="text-center text-sm text-gray-700 mt-2 font-semibold mb-10"
           initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ delay: 0.2, duration: 0.7 }}
@@ -94,16 +106,12 @@ export default function HeroSection() {
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-          {[
-            { title: "৪৫+", desc: "যোগ্যতাসম্পন্ন ডাক্তার" },
-            { title: "১৪৫k+", desc: "পজিটিভ রিভিউ" },
-            { title: "১০০%", desc: "স্বাস্থ্য সেবায় অগ্রাধিকার" },
-            { title: "✓", desc: "আপনার পছন্দের ডাক্তার" },
-          ].map((item, idx) => (
+          {stats.map((item, idx) => (
             <motion.div
               key={idx}
               className="bg-white shadow-lg rounded-2xl p-8 border border-blue-100"
               initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }} // ensures initial visibility
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.7, delay: idx * 0.1 }}
