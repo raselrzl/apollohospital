@@ -55,7 +55,6 @@ export default function Navbar() {
               <DropdownMenuItem onClick={handleClick}><Link href="#departments">বিভাগসমূহ</Link></DropdownMenuItem>
               <DropdownMenuItem onClick={handleClick}><Link href="#corporate">কোম্পানি</Link></DropdownMenuItem>
               <DropdownMenuItem onClick={handleClick}><Link href="#package">প্যাকেজ</Link></DropdownMenuItem>
-              <DropdownMenuItem onClick={handleClick}><Link href="#news">সংবাদ ও মতামত</Link></DropdownMenuItem>
               <DropdownMenuItem onClick={handleClick}><Link href="#contact">যোগাযোগ</Link></DropdownMenuItem>
               <DropdownMenuItem onClick={handleClick}><Link href="#about">আমাদের সম্পর্কে</Link></DropdownMenuItem>
               <DropdownMenuItem className="text-md font-bold">📞 +880 1334-913290</DropdownMenuItem>

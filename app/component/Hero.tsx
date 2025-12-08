@@ -13,18 +13,6 @@ export default function HeroSection() {
 
   return (
     <div id="home" className="relative">
-
-      {/* 🔥 Center-top small 24/7 badge (Bangla) */}
-      <motion.div
-        className="absolute top-2 left-1/2 transform -translate-x-1/2 z-50 
-        bg-red-600 text-white font-extrabold px-4 py-1 rounded-full shadow-lg 
-        border-2 border-white text-lg"
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ repeat: Infinity, duration: 1.8 }}
-      >
-        ২৪/৭
-      </motion.div>
-
       {/* Hero Section */}
       <section
         className="max-w-7xl mx-auto bg-[#f0f8ff] h-[700px] border-b flex flex-col md:flex-row items-center px-6 md:px-12 pt-2"

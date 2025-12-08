@@ -9,6 +9,7 @@ import "./globals.css";
 import Navbar from "./component/Navbar";
 import TopAlertBar from "./component/TopAlertBar";
 import ScrollToTop from "./component/ScrollToTop";
+import EmergencyBadge from "./component/EmergencyBadge";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,7 +58,7 @@ export default function RootLayout({
           <TopAlertBar />
           <Navbar />
         </div>
-
+<EmergencyBadge />
         {/* Spacer to prevent overlap */}
         <div className="pt-28 md:pt-[126px]">
           {children}

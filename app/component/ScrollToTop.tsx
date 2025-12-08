@@ -29,7 +29,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 z-9999 bg-blue-900 text-white p-3 rounded-full shadow-xl transition-all ${
+      className={`fixed bottom-6 right-10 z-9999 bg-blue-900 text-white p-3 rounded-full shadow-xl transition-all ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
