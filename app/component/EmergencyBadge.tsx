@@ -9,7 +9,7 @@ export default function EmergencyBadge() {
     <motion.a
       href={`tel:${phoneNumber}`}
       className="
-        fixed top-40 right-10 -translate-x-1/2
+        fixed bottom-40 right-10 -translate-x-1/2
         w-12 h-12 rounded-full 
         text-white font-extrabold text-xl
         flex items-center justify-center
