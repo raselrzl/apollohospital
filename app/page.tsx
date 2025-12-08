@@ -1,3 +1,4 @@
+import AmbulanceService from "./component/AmbulanceService";
 import HeroSection from "./component/Hero";
 import ServicesSection from "./component/Services";
 
@@ -7,6 +8,7 @@ export default function Home() {
     
       <HeroSection />
       <ServicesSection />
+      <AmbulanceService />
       {/* You can add more sections below like Services, About, Contact */}
     </div>
   );
