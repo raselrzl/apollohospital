@@ -1,15 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(false); // close dropdown when clicking menu item
+  };
+
   return (
-    <nav className="bg-white shadow-md fixed w-full md:py-1 z-100 px-2">
+    <nav className="bg-white shadow-md fixed w-full md:py-1 z-100 pr-6">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20 relative">
-        
+
         {/* Left - Logo */}
         <Link href="/" className="flex items-center">
           <div className="w-10 h-10 md:w-20 md:h-20 bg-[url('/logo.png')] bg-contain bg-center" />
@@ -34,23 +41,23 @@ export default function Navbar() {
 
         {/* Mobile burger */}
         <div className="md:hidden flex items-center">
-          <DropdownMenu>
+          <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="p-0 bg-blue-900 text-white rounded-xs cursor-pointer">
                 <Menu className="h-14 w-14" />
               </Button>
             </DropdownMenuTrigger>
-            {/* Added z-index to make dropdown visible above navbar */}
+
             <DropdownMenuContent className="w-48 rounded-none bg-white z-9999">
-              <DropdownMenuItem><Link href="#home">হোম</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#services">সেবা</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#specialists">বিশেষজ্ঞ</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#departments">বিভাগসমূহ</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#corporate">কোম্পানি</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#package">প্যাকেজ</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#news">সংবাদ ও মতামত</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#contact">যোগাযোগ</Link></DropdownMenuItem>
-              <DropdownMenuItem><Link href="#about">আমাদের সম্পর্কে</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#home">হোম</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#services">সেবা</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#specialists">বিশেষজ্ঞ</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#departments">বিভাগসমূহ</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#corporate">কোম্পানি</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#package">প্যাকেজ</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#news">সংবাদ ও মতামত</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#contact">যোগাযোগ</Link></DropdownMenuItem>
+              <DropdownMenuItem onClick={handleClick}><Link href="#about">আমাদের সম্পর্কে</Link></DropdownMenuItem>
               <DropdownMenuItem className="text-md font-bold">📞 +880 1334-913290</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
