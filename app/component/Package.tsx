@@ -14,7 +14,7 @@ export default function Package() {
           transition={{ duration: 0.7 }}
           className="text-2xl md:text-5xl font-extrabold text-blue-900 leading-tight"
         >
-          বেবি ডেলিভারি প্যাকেজ
+          প্যাকেজ
         </motion.h2>
 
         <motion.p

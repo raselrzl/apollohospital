@@ -26,9 +26,7 @@ export default function Navbar() {
           <Link href="#services" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">সেবা</Link>
           <Link href="#specialists" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">বিশেষজ্ঞ</Link>
           <Link href="#departments" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">বিভাগসমূহ</Link>
-          <Link href="#corporate" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">কোম্পানি</Link>
           <Link href="#package" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">প্যাকেজ</Link>
-          <Link href="#news" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">সংবাদ ও মতামত</Link>
           <Link href="#contact" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">যোগাযোগ</Link>
           <Link href="#about" className="text-gray-800 hover:text-[#0dcaf0] transition font-bold">আমাদের সম্পর্কে</Link>
           <span className="text-gray-800 font-bold text-xl">📞 +880 1334-913290</span>
