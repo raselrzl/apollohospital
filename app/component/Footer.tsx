@@ -16,7 +16,7 @@ export default function Footer() {
             height={50}
             className="object-contain"
           />
-          <span className="font-bold text-lg">Apollo Hospital</span>
+          <span className="font-bold text-lg">Apollo Specialized Hospital</span>
         </div>
 
         {/* Facebook Link */}
@@ -29,8 +29,8 @@ export default function Footer() {
             <Image
               src="/fb.webp" // make sure this is in public folder
               alt="Facebook"
-              width={24}
-              height={24}
+              width={40}
+              height={40}
               className="object-contain"
             />
             <span>Facebook</span>
