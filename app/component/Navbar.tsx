@@ -94,8 +94,13 @@ export default function Navbar() {
             <Info size={18} /> আমাদের সম্পর্কে
           </Link>
 
-          <span className="text-gray-800 font-bold text-xl">
-            📞 +880 1334-913290
+          <span>
+            <a
+              href="tel:+8801334913290"
+              className="flex items-center gap-2 w-full"
+            >
+              📞 +880 1334-913290
+            </a>
           </span>
         </div>
 
@@ -160,7 +165,7 @@ export default function Navbar() {
                 </Link>
               </DropdownMenuItem>
 
-               <DropdownMenuItem onClick={handleClick}>
+              <DropdownMenuItem onClick={handleClick}>
                 <Link href="#job" className="flex items-center gap-2">
                   <UserPlus size={18} /> চাকরি
                 </Link>
