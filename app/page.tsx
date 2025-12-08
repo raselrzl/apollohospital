@@ -2,6 +2,7 @@ import AmbulanceService from "./component/AmbulanceService";
 import DepartmentsSection from "./component/DepartmentsSection";
 import DoctorsSection from "./component/DoctorsSection";
 import HeroSection from "./component/Hero";
+import Package from "./component/Package";
 import ServicesSection from "./component/Services";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <AmbulanceService />
       <DoctorsSection />
       <DepartmentsSection />
+      <Package />
       {/* You can add more sections below like Services, About, Contact */}
     </div>
   );
