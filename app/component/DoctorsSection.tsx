@@ -78,7 +78,7 @@ export default function DoctorsSection() {
   }, []);
 
   return (
-    <section id="specialists" className="py-16 bg-[#f8fbff]">
+    <section id="specialists" className="py-16 bg-[#f8fbff] border-b">
       <div className="max-w-7xl mx-auto px-6 text-center relative">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

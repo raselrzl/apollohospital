@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AmbulanceService() {
   return (
-    <section className="relative overflow-hidden py-16 px-6 md:px-12 bg-gray-50">
+    <section className="relative overflow-hidden py-16 px-6 md:px-12 bg-gray-50 border-b">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
         
         {/* Left - Red accent with text */}
