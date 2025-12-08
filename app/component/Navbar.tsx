@@ -159,6 +159,12 @@ export default function Navbar() {
                 </Link>
               </DropdownMenuItem>
 
+               <DropdownMenuItem onClick={handleClick}>
+                <Link href="#job" className="flex items-center gap-2">
+                  <Info size={18} /> চাকরি
+                </Link>
+              </DropdownMenuItem>
+
               <DropdownMenuItem className="text-md font-bold text-blue-900 flex items-center gap-2 mt-2 border-t border-blue-300 pt-2">
                 <a
                   href="tel:+8801334913290"

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 
 export default function EmergencyBadge() {
   const phoneNumber = "+8801334913290";
@@ -26,7 +27,7 @@ export default function EmergencyBadge() {
         `,
       }}
     >
-      ২৪/৭
+      <Phone className="w-6 h-6 text-white mb-2" />
     </motion.a>
   );
 }

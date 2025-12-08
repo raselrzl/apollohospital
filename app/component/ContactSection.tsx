@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, UserPlus } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -44,9 +44,47 @@ export default function ContactSection() {
             <MapPin className="w-6 h-6 text-blue-900 mb-2" />
             <p className="text-lg font-semibold text-blue-900">ঠিকানা</p>
             <p className="text-gray-700 mt-1 text-center md:text-left">
-              AR Heritage, KB Alauddin Road, Muslim Quarter, Maulvi Bazar, Bangladesh, 3200
+              AR Heritage, KB Alauddin Road, Muslim Quarter, Maulvi Bazar,
+              Bangladesh, 3200
             </p>
           </div>
+        </motion.div>
+
+        {/* Careers / Join Our Team */}
+        {/* Careers / Join Our Team */}
+        <motion.div
+          id="job"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+          className="bg-white shadow-lg rounded-xs p-6 md:p-10 mb-10 border border-blue-100 text-left"
+        >
+          <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+            <UserPlus className="w-6 h-6 text-blue-900" />
+            <h3 className="text-xl md:text-2xl font-bold text-blue-900">
+              আমাদের স্বাস্থ্যসেবা দলের অংশ হন
+            </h3>
+          </div>
+          <p className="text-gray-700 text-md md:text-lg">
+            আপনি কি স্বাস্থ্যসেবার জন্য নিবেদিত? অ্যাপোলো স্পেশালাইজড হাসপাতাল
+            আমাদের রোগীদের সুস্থতা নিশ্চিত করার জন্য প্রতিভাবান ও যত্নশীল কর্মী
+            খুঁজছে।
+          </p>
+          <p className="text-gray-700 mt-2">
+            আপনার সিভি সরাসরি জমা দিতে পারেন আমাদের হাসপাতালে অথবা ইমেইল করুন:
+            <a
+              href="mailto:apollohospitalmb@gmail.com"
+              className="text-blue-900 font-semibold ml-1"
+            >
+              apollohospitalmb@gmail.com
+            </a>
+            .
+          </p>
+          <p className="text-gray-700 mt-2">
+            আমরা আপনাকে আমাদের পরিবারের অংশ হিসেবে স্বাগত জানাব এবং আপনার দক্ষতা
+            ও সহানুভূতিশীলতা আমাদের রোগীদের যত্নে কাজে লাগাতে চাই।
+          </p>
         </motion.div>
 
         {/* Google Map */}
