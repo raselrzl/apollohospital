@@ -16,7 +16,7 @@ export default function Navbar() {
         </Link>
 
         {/* Center - Phone number on mobile */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 md:hidden text-gray-800 font-bold text-xl">
+        <div className="absolute left-1/2 transform -translate-x-1/2 md:hidden text-blue-800 font-bold text-md">
           📞 +880 1334-913290
         </div>
 

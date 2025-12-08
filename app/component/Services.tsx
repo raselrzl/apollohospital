@@ -20,52 +20,41 @@ const services = [
 ];
 
 export default function ServicesSection() {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.15, duration: 0.8 } },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
-    <motion.section
-      id="services"
-      className="py-16 bg-[#f8fbff] border-b"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
+    <section id="services" className="py-16 bg-[#f8fbff]">
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         {/* HEADER */}
         <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
           className="text-2xl md:text-5xl font-extrabold text-blue-900 leading-tight"
-          variants={cardVariants}
         >
           আমাদের সেবা সমূহ
         </motion.h2>
 
         <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
           className="text-lg text-gray-700 mt-2"
-          variants={cardVariants}
         >
           Our Services
         </motion.p>
 
         {/* GRID */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12"
-          variants={containerVariants}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              variants={cardVariants}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 150 }}
+              transition={{ type: "spring", stiffness: 150, duration: 0.5 }}
               className="bg-white rounded-xl shadow-md border border-blue-100 p-4"
             >
               <div className="w-full h-40 relative rounded-md overflow-hidden">
@@ -83,8 +72,8 @@ export default function ServicesSection() {
               <p className="text-sm text-gray-600">{service.nameEn}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

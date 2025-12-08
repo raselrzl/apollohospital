@@ -4,14 +4,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function HeroSection() {
-  const boxVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <>
-      {/* HERO SECTION */}
+      {/* Hero Section */}
       <section
         id="home"
         className="max-w-7xl mx-auto bg-[#f0f8ff] h-[700px] border-b flex flex-col md:flex-row items-center px-6 md:px-12 pt-10"
@@ -19,14 +14,10 @@ export default function HeroSection() {
         {/* Left side - Text */}
         <motion.div
           className="md:w-1/2 flex flex-col justify-center space-y-6"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
         >
           <h1 className="text-2xl md:text-5xl font-extrabold text-blue-900 leading-tight">
             অ্যাপোলো <br />
@@ -51,16 +42,16 @@ export default function HeroSection() {
         {/* Right side - Image with NICU overlay */}
         <motion.div
           className="md:w-1/2 w-full mt-8 md:mt-0 relative h-64 md:h-80 rounded-xl flex justify-center items-center"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
           <Image
             src="/nicu.webp"
             alt="অ্যাপোলো স্পেশালাইজড হাসপাতাল"
             fill
-            className="rounded-xs object-cover md:object-contain"
+            className="rounded-xs object-fill md:object-fill"
           />
 
           {/* NICU text box */}
@@ -69,18 +60,24 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        <p className="mt-4 text-center text-gray-800 text-lg block md:hidden">
+        <motion.p
+          className="mt-4 text-center text-gray-800 text-lg block md:hidden"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+        >
           মৌলভীবাজারে প্রথম ও একমাত্র NICU সার্ভিস!
-        </p>
+        </motion.p>
       </section>
 
-      {/* WHY CHOOSE US SECTION */}
+      {/* Why Choose Us Section */}
       <section className="max-w-7xl mx-auto py-16 px-6 md:px-12 border-b">
         <motion.h2
           className="text-2xl md:text-5xl font-extrabold text-blue-900 leading-tight text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
           কেন আমাদের বেছে নেবেন?
@@ -90,37 +87,32 @@ export default function HeroSection() {
           className="text-center text-sm text-gray-700 mt-2 font-semibold mb-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
           আমরা উচ্চমানের স্বাস্থ্যসেবা প্রদানে প্রতিশ্রুতিবদ্ধ।
         </motion.p>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ staggerChildren: 0.2 }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           {[
-            { title: "৪৫+", subtitle: "যোগ্যতাসম্পন্ন ডাক্তার" },
-            { title: "১৪৫k+", subtitle: "পজিটিভ রিভিউ" },
-            { title: "১০০%", subtitle: "স্বাস্থ্য সেবায় অগ্রাধিকার" },
-            { title: "✓", subtitle: "আপনার পছন্দের ডাক্তার" },
-          ].map((box, index) => (
+            { title: "৪৫+", desc: "যোগ্যতাসম্পন্ন ডাক্তার" },
+            { title: "১৪৫k+", desc: "পজিটিভ রিভিউ" },
+            { title: "১০০%", desc: "স্বাস্থ্য সেবায় অগ্রাধিকার" },
+            { title: "✓", desc: "আপনার পছন্দের ডাক্তার" },
+          ].map((item, idx) => (
             <motion.div
-              key={index}
+              key={idx}
               className="bg-white shadow-lg rounded-2xl p-8 border border-blue-100"
-              variants={boxVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ type: "spring", stiffness: 150 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.7, delay: idx * 0.1 }}
             >
-              <h3 className="text-4xl font-extrabold text-blue-900">{box.title}</h3>
-              <p className="text-lg text-gray-700 mt-2">{box.subtitle}</p>
+              <h3 className="text-4xl font-extrabold text-blue-900">{item.title}</h3>
+              <p className="text-lg text-gray-700 mt-2">{item.desc}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </section>
     </>
   );
