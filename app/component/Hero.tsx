@@ -12,10 +12,10 @@ export default function HeroSection() {
   ];
 
   return (
-    <>
+    <div id="home">
       {/* Hero Section */}
       <section
-        id="home"
+        
         className="max-w-7xl mx-auto bg-[#f0f8ff] h-[700px] border-b flex flex-col md:flex-row items-center px-6 md:px-12 pt-2"
       >
         {/* Left side - Text */}
@@ -122,6 +122,6 @@ export default function HeroSection() {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }
