@@ -16,7 +16,7 @@ export default function AmbulanceService() {
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold">অ্যাম্বুলেন্স সার্ভিস</h2>
+          <h2 className="text-4xl md:text-6xl font-extrabold">অ্যাম্বুলেন্স সার্ভিস</h2>
           <p className="md:text-lg">
             জরুরি মুহূর্তে আমরা সর্বদা পাশে আছি। কল করুন আমাদের ২৪/৭ অ্যাম্বুলেন্স সার্ভিসের জন্য।
           </p>
@@ -43,15 +43,15 @@ export default function AmbulanceService() {
             height={300}
             className="object-contain"
           />
-          {/* 24/7 Animated Badge */}
+          {/* 24/7 3D Animated Badge */}
           <motion.div
-            className="absolute top-0 right-0 md:top-8 md:right-8 w-24 h-24 flex justify-center items-center rounded-full border-4 border-red-500 text-red-600 font-extrabold text-xl md:text-3xl"
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="absolute top-0 right-0 md:top-8 md:right-8 w-32 h-32 flex justify-center items-center rounded-full bg-red-600 shadow-2xl text-white font-extrabold text-4xl md:text-6xl perspective-1000"
+            animate={{ rotateY: [0, 180, 0] }}
+            transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
           >
             ২৪/৭
             <motion.div
-              className="absolute inset-0 rounded-full border-4 border-red-300 animate-ping"
+              className="absolute inset-0 rounded-full border-4 border-red-400 animate-ping"
             />
           </motion.div>
         </motion.div>

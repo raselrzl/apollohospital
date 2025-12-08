@@ -12,17 +12,28 @@ export default function HeroSection() {
   ];
 
   return (
-    <div id="home">
+    <div id="home" className="relative">
+
+      {/* 🔥 Center-top small 24/7 badge (Bangla) */}
+      <motion.div
+        className="absolute top-2 left-1/2 transform -translate-x-1/2 z-50 
+        bg-red-600 text-white font-extrabold px-4 py-1 rounded-full shadow-lg 
+        border-2 border-white text-lg"
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ repeat: Infinity, duration: 1.8 }}
+      >
+        ২৪/৭
+      </motion.div>
+
       {/* Hero Section */}
       <section
-        
         className="max-w-7xl mx-auto bg-[#f0f8ff] h-[700px] border-b flex flex-col md:flex-row items-center px-6 md:px-12 pt-2"
       >
         {/* Left side - Text */}
         <motion.div
           className="md:w-1/2 flex flex-col justify-center space-y-6"
           initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }} // ensures initial visibility
+          animate={{ opacity: 1, x: 0 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
@@ -32,11 +43,13 @@ export default function HeroSection() {
             স্পেশালাইজড <br />
             হাসপাতাল মৌলভীবাজার
           </h1>
+
           <p className="text-md md:text-2xl text-gray-800">
             আপনার সুস্থতা, আমাদের অঙ্গীকার! অ্যাপোলো হাসপাতাল – মৌলভীবাজারের
             বিশ্বস্ত স্বাস্থ্যসেবা। দক্ষ চিকিৎসক এবং যত্নশীল সেবা, সবসময় আপনার
             সুস্থতা ও সুস্বাস্থ্যের জন্য নিবেদিত।
           </p>
+
           <div className="flex justify-start space-x-4 mt-4 items-end">
             <a
               href="#services"
@@ -47,7 +60,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Right side - Image with NICU overlay */}
+        {/* Right side - Existing Image (NOT changed) */}
         <motion.div
           className="md:w-1/2 w-full mt-8 md:mt-0 relative h-64 md:h-80 rounded-xl flex justify-center items-center"
           initial={{ opacity: 0, x: 30 }}
@@ -72,7 +85,7 @@ export default function HeroSection() {
         <motion.p
           className="mt-4 text-center text-gray-800 text-lg block md:hidden"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }} // always visible initially
+          animate={{ opacity: 1 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
@@ -87,8 +100,6 @@ export default function HeroSection() {
           className="text-2xl md:text-5xl font-extrabold text-blue-900 leading-tight text-center mb-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7 }}
         >
           কেন আমাদের বেছে নেবেন?
@@ -98,11 +109,9 @@ export default function HeroSection() {
           className="text-center text-sm text-gray-700 mt-2 font-semibold mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          আমরা উচ্চমানের স্বাস্থ্যসেবা প্রদানে প্রতিশ্রুতিবদ্ধ।
+          আমরা উচ্চমানের স্বাস্থ্যসেবা প্রদানে প্রতিশ্রুতibদ্ধ।
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -111,12 +120,12 @@ export default function HeroSection() {
               key={idx}
               className="bg-white shadow-lg rounded-2xl p-8 border border-blue-100"
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }} // ensures initial visibility
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: idx * 0.1 }}
             >
-              <h3 className="text-4xl font-extrabold text-blue-900">{item.title}</h3>
+              <h3 className="text-4xl font-extrabold text-blue-900">
+                {item.title}
+              </h3>
               <p className="text-lg text-gray-700 mt-2">{item.desc}</p>
             </motion.div>
           ))}
