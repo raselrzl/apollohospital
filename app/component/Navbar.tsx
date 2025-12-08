@@ -20,6 +20,7 @@ import {
   Info,
   Menu,
   Stethoscope,
+  UserPlus,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -161,7 +162,7 @@ export default function Navbar() {
 
                <DropdownMenuItem onClick={handleClick}>
                 <Link href="#job" className="flex items-center gap-2">
-                  <Info size={18} /> চাকরি
+                  <UserPlus size={18} /> চাকরি
                 </Link>
               </DropdownMenuItem>
 
