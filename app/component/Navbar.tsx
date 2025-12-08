@@ -7,7 +7,7 @@ import { Menu } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow-md fixed w-full md:py-1 z-50">
+    <nav className="bg-white shadow-md fixed w-full md:py-1 z-100">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20 relative">
         
         {/* Left - Logo */}
@@ -42,7 +42,8 @@ export default function Navbar() {
                 <Menu className="h-14 w-14" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-48 rounded-none bg-white">
+            {/* Added z-index to make dropdown visible above navbar */}
+            <DropdownMenuContent className="w-48 rounded-none bg-white z-9999">
               <DropdownMenuItem><Link href="#home">হোম</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="#services">সেবা</Link></DropdownMenuItem>
               <DropdownMenuItem><Link href="#specialists">বিশেষজ্ঞ</Link></DropdownMenuItem>

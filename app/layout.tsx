@@ -7,6 +7,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "./component/Navbar";
+import TopAlertBar from "./component/TopAlertBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,9 +50,17 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={` ${tiroBangla.variable} antialiased`}>
-        <Navbar />
-        {children}
+      <body className={`${tiroBangla.variable} antialiased`}>
+        {/* Fixed Top Bar and Navbar */}
+        <div className="fixed top-0 left-0 w-full z-100">
+          <TopAlertBar />
+          <Navbar />
+        </div>
+
+        {/* Spacer to prevent overlap */}
+        <div className="pt-28 md:pt-[126px]">
+          {children}
+        </div>
       </body>
     </html>
   );
