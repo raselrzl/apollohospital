@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Prevent indexing of backend/admin paths (optional)
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Sitemap
+Sitemap: https://apollohospitalmb.com/sitemap.xml
