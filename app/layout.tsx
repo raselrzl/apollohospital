@@ -36,21 +36,61 @@ const tiroBangla = Tiro_Bangla({
 // ⭐ SEO + Google Ranking Optimization
 export const metadata: Metadata = {
   metadataBase: new URL("https://apollohospitalmb.com"),
-  title: {
-    default: "Apollo Hospital Moulvibazar — Leading Healthcare",
-    template: "%s | Apollo Hospital Moulvibazar",
-  },
+ title: "Apollo Hospital Moulvibazar – Best Healthcare & Emergency Services",
   description:
-    "Apollo Hospital Moulvibazar provides emergency services, diagnostics, specialist doctors, and trusted healthcare in Moulvibazar.",
+    "Apollo Hospital Moulvibazar provides top-notch healthcare, specialist doctors, diagnostics, and emergency services. Trusted hospital in Moulvibazar, Bangladesh.",
   keywords: [
+    // Hospital Brand Keywords
     "Apollo Hospital",
     "Apollo Hospital Moulvibazar",
-    "Hospital Moulvibazar",
+    "Apollo Medical Center",
+    "NICL Hospital Moulvibazar",
+    "NICL Hospital",
     "Best hospital Moulvibazar",
-    "Emergency hospital",
-    "Doctors Moulvibazar",
-    "Diagnostics Center Moulvibazar",
+    "Private hospital Moulvibazar",
+    "Trusted hospital Moulvibazar",
     "Healthcare Bangladesh",
+    "Top hospitals Bangladesh",
+
+    // Location & Local Search
+    "Hospital Moulvibazar",
+    "Emergency hospital Moulvibazar",
+    "Doctors Moulvibazar",
+    "Specialist doctors Moulvibazar",
+    "Child specialist Moulvibazar",
+    "Gynecologist Moulvibazar",
+    "Cardiologist Moulvibazar",
+    "Orthopedic doctor Moulvibazar",
+    "Eye specialist Moulvibazar",
+    "ENT specialist Moulvibazar",
+
+    // Diagnostics & Services
+    "Diagnostics Center Moulvibazar",
+    "Pathology Moulvibazar",
+    "Blood test Moulvibazar",
+    "ECG test Moulvibazar",
+    "X-ray center Moulvibazar",
+    "Ultrasound Moulvibazar",
+    "Full body checkup Moulvibazar",
+    "Medical test Moulvibazar",
+    "Health package Moulvibazar",
+
+    // Emergency & Quick Care
+    "24/7 hospital Moulvibazar",
+    "Emergency services Moulvibazar",
+    "Ambulance Moulvibazar",
+    "ICU Moulvibazar",
+    "Emergency healthcare Bangladesh",
+
+    // Long-tail / SEO Boosters
+    "Best affordable hospital Moulvibazar",
+    "Top doctors in Moulvibazar",
+    "Best maternity care Moulvibazar",
+    "Children's hospital Moulvibazar",
+    "Advanced medical services Moulvibazar",
+    "Reliable healthcare Moulvibazar",
+    "Hospital with specialist doctors Moulvibazar",
+    "Medical packages Moulvibazar"
   ],
   openGraph: {
     title: "Apollo Hospital Moulvibazar",
