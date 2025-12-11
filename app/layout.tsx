@@ -30,7 +30,7 @@ const notoBengali = Noto_Sans_Bengali({
 export const metadata: Metadata = {
   title: "Apollo Hospital",
   description:
-    "Apollo Hospital, your trusted healthcare partner in Moulvibazar.",
+    "Apollo Hospital Moulvibazar, your trusted healthcare partner in Moulvibazar.",
 };
 
 const tiroBangla = Tiro_Bangla({
