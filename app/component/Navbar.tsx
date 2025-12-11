@@ -40,7 +40,9 @@ export default function Navbar() {
 
         {/* Mobile Number */}
         <div className="absolute left-1/2 transform -translate-x-1/2 md:hidden text-blue-800 font-bold text-md">
-          📞 +880 1334-913290
+          <a href="tel:+8801334913290" className="hover:underline">
+            📞 +880 1334-913290
+          </a>
         </div>
 
         {/* Desktop Navigation */}

@@ -58,7 +58,7 @@ export default function RootLayout({
           <TopAlertBar />
           <Navbar />
         </div>
-<EmergencyBadge />
+        <EmergencyBadge />
         {/* Spacer to prevent overlap */}
         <div className="pt-28 md:pt-[126px]">
           {children}

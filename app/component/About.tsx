@@ -14,7 +14,7 @@ export default function AboutHospitalSection() {
           transition={{ duration: 0.7 }}
           className="text-3xl md:text-5xl font-extrabold text-blue-900 leading-tight mb-10"
         >
-        অ্যাপোলো স্পেশালাইজ্ড হাসপাতাল, মৌলভীবাজার
+          অ্যাপোলো স্পেশালাইজ্ড হাসপাতাল, মৌলভীবাজার
         </motion.h2>
 
         <motion.div
@@ -24,19 +24,22 @@ export default function AboutHospitalSection() {
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.8 }}
         >
-    
-          <p className="text-gray-700 text-lg text-center">আপনার সুস্থ জীবন আমাদের অঙ্গীকার 💙</p>
+          <p className="text-gray-700 text-lg text-center">
+            আপনার সুস্থ জীবন আমাদের অঙ্গীকার 💙
+          </p>
 
           <p className="flex items-center gap-2 justify-center text-gray-700 text-lg">
             <Activity className="w-6 h-6 text-blue-900" /> আধুনিক চিকিৎসা সেবা
           </p>
 
           <p className="flex items-center gap-2 justify-center text-gray-700 text-lg">
-            <UserCheck className="w-6 h-6 text-blue-900" /> দক্ষ ও অভিজ্ঞ চিকিৎসক দল
+            <UserCheck className="w-6 h-6 text-blue-900" /> দক্ষ ও অভিজ্ঞ
+            চিকিৎসক দল
           </p>
 
           <p className="flex items-center gap-2 justify-center text-gray-700 text-lg">
-            <Activity className="w-6 h-6 text-blue-900" /> আইসিইউ, সিসিইউ, এনআইসিইউ ও ডায়ালাইসিস সুবিধা
+            <Activity className="w-6 h-6 text-blue-900" /> আইসিইউ, সিসিইউ,
+            এনআইসিইউ ও ডায়ালাইসিস সুবিধা
           </p>
 
           <p className="flex items-center gap-2 justify-center text-gray-700 text-lg">
@@ -48,11 +51,20 @@ export default function AboutHospitalSection() {
           </p>
 
           <p className="flex items-center gap-2 justify-center text-gray-700 text-lg">
-            <MapPin className="w-6 h-6 text-blue-900" /> ঠিকানা: এ.আর. হেরিটেজ, মুসলিম কোয়ার্টার, কে.বি. আলাউদ্দিন রোড, মৌলভীবাজার
+            <MapPin className="w-6 h-6 text-blue-900" /> ঠিকানা: এ.আর. হেরিটেজ,
+            মুসলিম কোয়ার্টার, কে.বি. আলাউদ্দিন রোড, মৌলভীবাজার
           </p>
 
           <p className="flex items-center gap-2 justify-center text-gray-700 text-lg">
-            <Phone className="w-6 h-6 text-blue-900" /> যোগাযোগ: ০১৩৩৪৯১৩২৯০, ০১৩৩৪৯১৩২৯১
+            <Phone className="w-6 h-6 text-blue-900" />
+            যোগাযোগ:
+            <a href="tel:01334913290" className="text-blue-900 hover:underline">
+              ০১৩৩৪৯১৩২৯০
+            </a>
+            ,
+            <a href="tel:01334913291" className="text-blue-900 hover:underline">
+              ০১৩৩৪৯১৩২৯১
+            </a>
           </p>
 
           <p className="text-gray-700 text-lg text-center font-semibold">

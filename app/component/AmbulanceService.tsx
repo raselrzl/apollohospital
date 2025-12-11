@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AmbulanceService() {
   return (
-    <section className="relative overflow-hidden py-16 px-6 md:px-12 bg-white border-b">
+    <section id="ambulanceservice" className="relative overflow-hidden py-16 px-6 md:px-12 bg-white border-b">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
         
         {/* Left - Red accent with text */}
@@ -24,7 +24,7 @@ export default function AmbulanceService() {
             href="tel:+8801334913290"
             className="relative inline-block bg-white text-red-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:scale-105 transition transform"
           >
-            ☎️ +880 1334-913290
+            ☎️ ০১৩৩৪৯১৩২৯০
           </a>
         </motion.div>
 

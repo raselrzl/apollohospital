@@ -54,12 +54,12 @@ export default function DepartmentsSection() {
           {departments.map((dept, idx) => (
             <motion.div
               key={idx}
-              className="bg-white border border-blue-100 rounded-xl shadow-md p-4 hover:shadow-lg transition"
+              className="bg-blue-900 border border-blue-950 rounded-xl shadow-md p-4 hover:shadow-lg transition"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
             >
-              <p className="text-blue-900 font-semibold">{dept}</p>
+              <p className="text-white font-semibold">{dept}</p>
             </motion.div>
           ))}
         </motion.div>

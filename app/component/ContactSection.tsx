@@ -29,14 +29,26 @@ export default function ContactSection() {
           <div className="flex flex-col items-center md:items-start border-b md:border-b-0 md:border-r border-blue-100 w-full md:w-auto pb-4 md:pb-0 md:pr-6">
             <Phone className="w-6 h-6 text-blue-900 mb-2" />
             <p className="text-lg font-semibold text-blue-900">ফোন</p>
-            <p className="text-gray-700 mt-1">+880 1334-913290</p>
+
+            <a
+              href="tel:+8801334913290"
+              className="text-gray-700 mt-1 hover:underline"
+            >
+              +880 1334-913290
+            </a>
           </div>
 
           {/* Email */}
           <div className="flex flex-col items-center md:items-start border-b md:border-b-0 md:border-r border-blue-100 w-full md:w-auto pb-4 md:pb-0 md:pr-6">
             <Mail className="w-6 h-6 text-blue-900 mb-2" />
             <p className="text-lg font-semibold text-blue-900">ইমেইল</p>
-            <p className="text-gray-700 mt-1">apollohospitalmb@gmail.com</p>
+
+            <a
+              href="mailto:apollohospitalmb@gmail.com"
+              className="text-gray-700 mt-1 hover:underline"
+            >
+              apollohospitalmb@gmail.com
+            </a>
           </div>
 
           {/* Address */}
