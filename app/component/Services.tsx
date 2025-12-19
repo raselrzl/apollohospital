@@ -11,7 +11,7 @@ const services = [
   { nameBn: "প্যাথলজি", nameEn: "Pathology", img: "pathology.png" },
   { nameBn: "স্ত্রী ও প্রসূতি বিভাগ", nameEn: "Gynecology & Obstetrics", img: "gynecology.png" },
   { nameBn: "সার্জারি", nameEn: "Surgery", img: "surgery.png" },
-  { nameBn: "স্বাভাবিক প্রসব", nameEn: "Normal Delivery", img: "normal-delivery.png" },
+  { nameBn: "নরমাল ডেলিভারি", nameEn: "Normal Delivery", img: "normal-delivery.png" },
   { nameBn: "অর্থোপেডিক্স", nameEn: "Orthopedics", img: "orthopedics.png" },
   { nameBn: "নাক, কান, গলা", nameEn: "ENT", img: "ent.png" },
   { nameBn: "ফটোথেরাপি", nameEn: "Phototherapy", img: "phototherapy.png" },
