@@ -1,47 +1,39 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-// Sample doctor data
-const doctors = [
+const hospitalCards = [
   {
-    name: "ডঃ রবিন হাসান",
-    designation: "হৃদরোগ বিশেষজ্ঞ",
-    qualification: "MBBS, MD (Cardiology)",
-    img: "man.png",
+    title: "২৪/৭ জরুরি সেবা",
+    description:
+      "দিন-রাত ২৪ ঘণ্টা অভিজ্ঞ চিকিৎসক ও জরুরি চিকিৎসা সেবা প্রদান করা হয়।",
   },
   {
-    name: "ডঃ সুমাইয়া আক্তার",
-    designation: "নিউরোলজি বিশেষজ্ঞ",
-    qualification: "MBBS, FCPS (Neurology)",
-    img: "wom.avif",
+    title: "বিশেষজ্ঞ চিকিৎসক",
+    description:
+      "বিভিন্ন বিভাগের অভিজ্ঞ ও দক্ষ বিশেষজ্ঞ চিকিৎসকদের মাধ্যমে মানসম্মত চিকিৎসা সেবা।",
   },
   {
-    name: "ডঃ তানভীর রহমান",
-    designation: "জেনারেল সার্জন",
-    qualification: "MBBS, MS (Surgery)",
-    img: "wom.avif",
+    title: "আধুনিক ডায়াগনস্টিক",
+    description:
+      "রক্ত পরীক্ষা, এক্স-রে, আল্ট্রাসাউন্ড ও অন্যান্য আধুনিক পরীক্ষা সুবিধা।",
   },
   {
-    name: "ডঃ লাবোনা খাতুন",
-    designation: "গাইনোকোলজি ও প্রসূতি বিশেষজ্ঞ",
-    qualification: "MBBS, FCPS (Gynecology)",
-    img: "wom.avif",
+    title: "অপারেশন থিয়েটার",
+    description:
+      "আধুনিক যন্ত্রপাতি সমৃদ্ধ নিরাপদ অপারেশন থিয়েটার ও বিভিন্ন ধরনের সার্জারি সেবা।",
   },
   {
-    name: "ডঃ মোহাম্মদ আহমেদ",
-    designation: "অর্থোপেডিক্স",
-    qualification: "MBBS, MS (Orthopedics)",
-    img: "man.png",
+    title: "মাতৃ ও শিশু সেবা",
+    description:
+      "গর্ভকালীন, প্রসূতি ও নবজাতক শিশুদের জন্য বিশেষায়িত চিকিৎসা ও পরিচর্যা।",
   },
   {
-    name: "ডঃ লাইলী রহমান",
-    designation: "ডায়াবেটিক বিশেষজ্ঞ",
-    qualification: "MBBS, MD (Endocrinology)",
-    img: "wom.avif",
+    title: "আইসিইউ ও ইনডোর সেবা",
+    description:
+      "আইসিইউ, কেবিন, ওয়ার্ড এবং রোগীদের জন্য নিরাপদ ও মানসম্মত ইনডোর সেবা।",
   },
 ];
 
@@ -51,13 +43,19 @@ export default function DoctorsSection() {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -250, behavior: "smooth" });
+      carouselRef.current.scrollBy({
+        left: -286,
+        behavior: "smooth",
+      });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 250, behavior: "smooth" });
+      carouselRef.current.scrollBy({
+        left: 286,
+        behavior: "smooth",
+      });
     }
   };
 
@@ -68,18 +66,30 @@ export default function DoctorsSection() {
 
     const handleScroll = () => {
       const scrollLeft = carousel.scrollLeft;
-      const cardWidth = carousel.children[0]?.clientWidth + 24 || 250; // card width + gap
+      const cardWidth =
+        (carousel.children[0] as HTMLElement)?.clientWidth + 24 || 286;
+
       const index = Math.round(scrollLeft / cardWidth);
-      setActiveIndex(index);
+
+      setActiveIndex(
+        Math.min(Math.max(index, 0), hospitalCards.length - 1)
+      );
     };
 
     carousel.addEventListener("scroll", handleScroll);
-    return () => carousel.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      carousel.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <section id="specialists" className="py-16 bg-[#f8fbff] border-b">
+    <section
+      id="specialists"
+      className="py-16 bg-[#f8fbff] border-b"
+    >
       <div className="max-w-7xl mx-auto px-6 text-center relative">
+        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +97,7 @@ export default function DoctorsSection() {
           transition={{ duration: 0.7 }}
           className="text-2xl md:text-5xl font-extrabold text-blue-900 leading-tight"
         >
-          আমাদের বিশেষজ্ঞ ডাক্তার
+          আমাদের হাসপাতাল সেবা
         </motion.h2>
 
         <motion.p
@@ -97,7 +107,7 @@ export default function DoctorsSection() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="text-lg text-gray-700 mt-2 mb-10"
         >
-          Meet our highly qualified specialists
+          আধুনিক চিকিৎসা ও মানসম্মত স্বাস্থ্যসেবা আপনার পাশে
         </motion.p>
 
         {/* Carousel */}
@@ -105,6 +115,7 @@ export default function DoctorsSection() {
           {/* Left Arrow */}
           <button
             onClick={scrollLeft}
+            aria-label="Previous"
             className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20 hover:bg-blue-50 transition"
           >
             <ChevronLeft className="w-6 h-6 text-blue-900" />
@@ -113,42 +124,37 @@ export default function DoctorsSection() {
           {/* Right Arrow */}
           <button
             onClick={scrollRight}
+            aria-label="Next"
             className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow-md p-2 z-20 hover:bg-blue-50 transition"
           >
             <ChevronRight className="w-6 h-6 text-blue-900" />
           </button>
 
+          {/* Cards */}
           <motion.div
             ref={carouselRef}
-            className="flex space-x-6 overflow-x-auto scrollbar-hide px-2 md:px-0"
+            className="flex space-x-6 overflow-x-auto scrollbar-hide px-8 md:px-12"
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
-            {doctors.map((doctor, index) => (
+            {hospitalCards.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-white shadow-lg rounded-xs p-4 min-w-[200px] flex flex-col items-center shrink-0 border border-blue-100"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 150 }}
+                className="bg-white shadow-lg rounded-xs p-6 min-w-[260px] h-[180px] flex flex-col justify-center shrink-0 border border-blue-100"
+                whileHover={{ scale: 1.03 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 150,
+                }}
               >
-                <div className="w-32 h-32 relative rounded-full overflow-hidden">
-                  <Image
-                    src={`/doctors/${doctor.img}`}
-                    alt={doctor.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-blue-900 mt-4">
-                  {doctor.name}
+                <h3 className="text-xl font-bold text-blue-900 mb-3 text-center">
+                  {item.title}
                 </h3>
-                <p className="text-gray-600 mt-1 text-center">
-                  {doctor.designation}
-                </p>
-                <p className="text-gray-500 text-sm mt-1 text-center">
-                  {doctor.qualification}
+
+                <p className="text-gray-600 text-sm leading-6 text-center">
+                  {item.description}
                 </p>
               </motion.div>
             ))}
@@ -156,28 +162,32 @@ export default function DoctorsSection() {
 
           {/* Dots */}
           <div className="flex justify-center mt-6 space-x-2">
-            {doctors.map((_, index) => (
+            {hospitalCards.map((_, index) => (
               <button
                 key={index}
+                aria-label={`Go to slide ${index + 1}`}
                 onClick={() => {
                   if (carouselRef.current) {
                     const cardWidth =
-                      carouselRef.current.children[0]?.clientWidth + 24 || 250;
+                      (carouselRef.current.children[0] as HTMLElement)
+                        ?.clientWidth + 24 || 286;
+
                     carouselRef.current.scrollTo({
                       left: index * cardWidth,
                       behavior: "smooth",
                     });
                   }
                 }}
-                className={`w-3 h-3 rounded-full ${
-                  activeIndex === index ? "bg-blue-900" : "bg-gray-300"
+                className={`w-3 h-3 rounded-full transition ${
+                  activeIndex === index
+                    ? "bg-blue-900"
+                    : "bg-gray-300"
                 }`}
               />
             ))}
           </div>
         </div>
-
-     </div>
+      </div>
     </section>
   );
 }
